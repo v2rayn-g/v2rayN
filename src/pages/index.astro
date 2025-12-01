@@ -3,17 +3,73 @@ import Layout from '../layouts/Layout.astro';
 import Markdown from '../components/Markdown.astro';
 
 const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
+V2RayN-G is a fast, secure and modern V2Ray client focused on privacy and reliability.
+Configure your servers, <a href="https://v2rayn-g.com/">V2rayN</a> share configs with friends and unlock the open internet in just a few clicks.
+`;
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
+const features = `
+- 🔒 **Strong privacy** – All traffic is encrypted end-to-end.
+- ⚡ **High speed** – Optimized for streaming, gaming and daily browsing.
+- 💻 **Easy to use** – Clean interface and quick import/export of configs.
+- 🌍 **Bypass limits** – Safely access blocked websites and services worldwide.
 `;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="V2RayN-G – Fast & Secure V2Ray Client">
+  <main class="space-y-12">
+    <!-- Hero Section -->
+    <section>
+      <h1 class="mb-4 text-4xl font-bold">
+        Welcome to V2RayN-G
+      </h1>
+
+      <p class="mb-8 text-lg max-w-2xl">
+        V2RayN-G is a powerful yet simple V2Ray client that gives you fast, secure and private access
+        to the open internet — without complicated setup.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <!-- yahan apni real download link laga dena -->
+        <a href="https://v2rayn-g.com/download" class="btn btn-lg sm:min-w-64">
+          Download V2RayN-G
+        </a>
+
+        <!-- yahan docs / guide ka link -->
+        <a href="https://v2rayn-g.com/docs" class="btn btn-outline btn-lg sm:min-w-64">
+          View Setup Guide
+        </a>
+      </div>
+    </section>
+
+    <!-- About / Explainer -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">
+        What is V2RayN-G?
+      </h2>
+
+      <Markdown content={explainer} class="mb-6 text-lg" />
+    </section>
+
+    <!-- Features -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">
+        Key Features
+      </h2>
+
+      <Markdown content={features} class="text-base" />
+    </section>
+
+    <!-- Simple Steps -->
+    <section>
+      <h2 class="mb-4 text-2xl font-semibold">
+        Get Started in 3 Easy Steps
+      </h2>
+
+      <ol class="space-y-2 list-decimal list-inside">
+        <li>Download and install V2RayN-G on your device.</li>
+        <li>Add or import your V2Ray server configuration.</li>
+        <li>Click connect and enjoy a fast, private connection.</li>
+      </ol>
+    </section>
+  </main>
 </Layout>
